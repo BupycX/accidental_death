@@ -1,0 +1,60 @@
+._text 
+{
+	position: static; 
+    background: #ccc;
+    padding: 5px;
+    padding-right: 200px; 
+    border: solid 2px black; 
+    text-align: justify;
+}
+
+.var_1 
+{
+	position: relative;
+	padding-right: 10px; 
+    background: #acc;
+    padding: 10px;
+    padding-right: 200px; 
+    border: solid 1px black;
+    left: auto;
+}
+
+.var_2 
+{
+	position: relative;
+	padding-right: 10px; 
+    background: #acc;
+    padding: 10px;
+    padding-right: 200px; 
+    border: solid 1px black;
+    left: auto;
+}
+
+.var_3 
+{
+	position: relative;
+	padding-right: 10px; 
+    background: #acc;
+    padding: 10px;
+    padding-right: 200px; 
+    border: solid 1px black;
+    left: auto;
+}
+
+.img
+{
+margin-top: 5px; /* Отступ сверху */
+margin-bottom: 5px; /* Отступ снизу */
+width: 480px;
+height: 320px;
+}
+
+.img_div
+{
+	text-align:center;
+}
+
+label 
+{
+  display: block;
+}
