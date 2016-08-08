@@ -13,18 +13,39 @@ function new_game()
 		var meet = ['bandit', 'vendor', 'vampire']; //встреча [бандит, продавец, вампир]
 		var ansver_meet = ['kill', 'say', 'escape']; //варианты ответов на встречу [убить, поговорить, убежать]
 		var ansver_jail = [{memory:'memory'},'call_guardian','jailbreak']; //  alert( arr[0].name ) варианты ответов в тюрьме [память, зов стража, побег из тюрьмы]
-		var ansver = ['look_around']; //общие варианты [Осмотреться]
-		var ansver_1 = document.getElementById('ansver_1'); //переменная ответов
+		var ansver_obshiu = ['look_around']; //общие варианты [Осмотреться]
+		
 		
 
-		var actual_say = "Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспонить.";
-		var ansver_one_actual_say = "Вариант №1";
-		var ansver_two_actual_say = "Вариант №2";
-		var ansver_three_actual_say = "Вариант №3";
+		var actual_say = "Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспомнить.";
+		var ansver_one_actual_say = "Позвать стражника";
+		var ansver_two_actual_say = "Попробывать выбить решетку самостоятельно";
+		var ansver_three_actual_say = "Попытаться вспомнить предыдущие события";
 
 		//Начало
 
 		location = 'jail';
+		
+			function an(ansver)
+			{
+				var ansver_id_span_one;
+				var ansver_id_span_two;
+				var ansver_id_span_three;
+
+				if (document.getElementById(ansver).checked && document.getElementById(ansver).value == "ansver_value_span_one") 
+				{
+				ansver_one_actual_say = "Стражник выбил вам зубы";
+				}
+				else if (document.getElementById(ansver).checked && document.getElementById(ansver).value == "ansver_value_span_two") 
+				{
+				ansver_two_actual_say = "Вы пытались";
+				}
+				else (document.getElementById(ansver).checked && document.getElementById(ansver).value == "ansver_value_span_three")
+				{
+				ansver_three_actual_say = "Не получилось";
+				}
+			}
+
 
 //рандом локаций
 

@@ -7,23 +7,27 @@
 <script src="accidental_death.js"></script>
 
 <input type="button" value="Начать игру" Onclick="new_game()"><br>	
-
-<div class="img_div" id="img_id" class="img"><br /></div><br> <!-- картинка -->
-
-<div class="actual_text_css" id="actual_text_js"></div> <!-- Происходящее событие -->
+<!-- картинка -->
+<div class="img_div" id="img_id" class="img"><br /></div><br> 
+<!-- Происходящее событие -->
+<div class="actual_text_css" id="actual_text_js"></div> 
 
 <p><b>Выбирете вариант ответа:</b><Br>
-
-<p><div class="var_1" id="var_1">
-    <label><input type="radio" name="name"><span id="ansver_id_span_one"></span></label> <!-- Вариант ответа №1 -->
+<!-- Вариант ответа №1 -->
+<p><div class="var_1">
+    <label><input type="radio" name="n">
+    <span id="ansver_id_span_one" value="ansver_value_span_one" onclick="an('ansver_id_span_one')"></span></label> 
 </div>
-
-<p><div class="var_2" id="var_2">
-    <label><input type="radio" name="name"><span id="ansver_id_span_two"></span></label> <!-- Вариант ответа №2 -->
+<!-- Вариант ответа №2 -->
+<p><div class="var_2">
+    <label><input type="radio" name="n">
+    <span id="ansver_id_span_two" onclick="an('ansver_id_span_two')"></span></label> 
 </div>
-
-<p><div class="var_3" id="var_3">
-    <label><input type="radio" name="name"><span id="ansver_id_span_three"></span></label> <!-- Вариант ответа №3 -->
+<!-- Вариант ответа №3 -->
+<p><div class="var_3">
+    <label><input type="radio" name="n">
+    <span id="ansver_id_span_three" onclick="an('ansver_id_span_three')"></span></label> 
 </div>
+<!-- <br /><input type="button" onclick="an('ansver_id_input_one, ansver_id_input_two, ansver_id_input_three')" value="Выбор сделан"> -->
 </body>
 </html>
