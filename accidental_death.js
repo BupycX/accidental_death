@@ -2,9 +2,6 @@ function new_game()
 	{
 		//Переменные
 		var a = 0; 
-		var variant_1="";
-		var variant_2="";
-		var variant_3="";
 
 		//описанные варианты ответов в тюрьме
 		var memory = 'Попытаться вспомнить';
@@ -18,9 +15,14 @@ function new_game()
 		var ansver_jail = [{memory:'memory'},'call_guardian','jailbreak']; //  alert( arr[0].name ) варианты ответов в тюрьме [память, зов стража, побег из тюрьмы]
 		var ansver = ['look_around']; //общие варианты [Осмотреться]
 		var ansver_1 = document.getElementById('ansver_1'); //переменная ответов
+		
 
+		var actual_say = "Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспонить.";
+		var ansver_one_actual_say = "Вариант №1";
+		var ansver_two_actual_say = "Вариант №2";
+		var ansver_three_actual_say = "Вариант №3";
 
-//Начало
+		//Начало
 
 		location = 'jail';
 
@@ -32,7 +34,7 @@ function new_game()
 		if (location == 'jail') 
 		{
 		ansver_jail.ansver_1 = Math.floor(Math.random() * (3 - 1 + 1)) + 1; //рандом вариантов в тюрьме
-		var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail.jpg'>"; //подключение изображений
+		var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail.jpg'>"; //подключение изображений - работает
 		}
 		else if (location == 'jail_2') 
 		{
@@ -50,29 +52,23 @@ function new_game()
 			alert('ошибочка');
 
 
-		//var _text = ("fdsdfsf"); // - работает только без функции
-		//document.body.children[0].innerHTML = _text;
+		//var actual = ("fdsdfsf"); // - работает только без функции
+		//document.body.children[0].innerHTML = actual;
 
-		//var _text = document.getElementById('_text').innerHTML = 'Вы снова проснулись';
-		//var _text = "Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспонить."
-		//document.write(_text);
+		//var actual = document.getElementById('actual').innerHTML = 'Вы снова проснулись';
+		//var actual = "Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспонить."
+		//document.write(actual);
 
-	function variant(ansver_1) 
-		{ 
-		var variant_1=""; 
-		
-		if (document.getElementById(checked).checked 
-		&& document.getElementById(checked).value == "var_value_1") 
-		{ 
-		variant_1 ="Вариант №1"; 
-		} 
+	
+			var actual = document.getElementById('actual_text_js').innerHTML = actual_say;
+			var ansver_one = document.getElementById('ansver_id_span_one').innerHTML = ansver_one_actual_say;
+			var ansver_two = document.getElementById('ansver_id_span_two').innerHTML = ansver_two_actual_say;
+			var ansver_three = document.getElementById('ansver_id_span_three').innerHTML = ansver_three_actual_say;
 
-		var _text = document.getElementById('_text').innerHTML = 'Вы снова проснулись в т';
-		
-		var ansver_1 = document.getElementById('ansver_1').innerHTML = variant_1 + "1"; //вариант №1
-		var ansver_2 = document.getElementById('ansver_2').innerHTML = variant_2 + "2"; //вариант №2
-		var ansver_3 = document.getElementById('ansver_3').innerHTML = variant_3 + "3"; //вариант №3
-		}
+	// new_game2 = function variant() 
+	// 	{ 
+	// 	var actual = document.getElementById('actual').innerHTML = 'Вы снова проснулись в темной и сырой комнате на сене. Вам кажется, вы уже были в подобной ситуации, но не можете никак вспонить.';
+	// 	}
 		
 		
 	}
