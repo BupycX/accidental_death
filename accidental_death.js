@@ -52,26 +52,27 @@ function new_game()
 //рандом событий
 
 //рандом ответов
-		if (location == 'jail') 
+		switch (location)
 		{
+		case 'jail': 
 		ansver_jail.ansver_1 = Math.floor(Math.random() * (3 - 1 + 1)) + 1; //рандом вариантов в тюрьме
 		var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail.jpg'>"; //подключение изображений - работает
-		}
-		else if (location == 'jail_2') 
-		{
+		break;
+		case 'jail_2':
+		
 			var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail_2.jpg'>";
-		}
-		else if (location == 'room_1') 
-		{
+		break;
+		case 'room_1':
+		
 			var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail.jpg'>";
-		}
-		else if (location == 'room_2') 
-		{
+		break;
+		case 'room_2': 
+		
 			var img_id = document.getElementById("img_id").innerHTML="<img src='img/jail.jpg'>";
-		}
-		else
+		break;
+		default:
 			alert('ошибочка');
-
+		}
 
 		//var actual = ("fdsdfsf"); // - работает только без функции
 		//document.body.children[0].innerHTML = actual;
